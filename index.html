@@ -3,127 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SmartHub الخليج | عالم الملحقات الذكية</title>
+    <title>إيليت للإلكترونيات - Elite Electronics</title>
     <style>
-        :root {
-            --primary-color: #2563eb;
-            --dark-bg: #0f172a;
-            --text-light: #f8fafc;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            background-color: #f1f5f9;
-            color: #333;
-        }
-
-        header {
-            background-color: var(--dark-bg);
-            color: var(--text-light);
-            padding: 1rem;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .hero {
-            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), 
-                        url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            color: white;
-            padding: 100px 20px;
-            text-align: center;
-        }
-
-        .hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
-        
-        .btn-buy {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 12px 30px;
-            border: none;
-            border-radius: 25px;
-            font-size: 1.1rem;
-            cursor: pointer;
-            text-decoration: none;
-        }
-
-        .products {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            padding: 40px;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        .product-card {
-            background: white;
-            border-radius: 15px;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-
-        .product-card:hover { transform: translateY(-5px); }
-        
-        .product-card img { width: 100%; border-radius: 10px; height: 200px; object-fit: cover; }
-
-        footer {
-            background: var(--dark-bg);
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-        }
+        :root { --main-color: #1a1a2e; --wa-color: #25d366; }
+        body { font-family: Arial, sans-serif; margin: 0; background: #f4f4f9; text-align: center; }
+        header { background: var(--main-color); color: white; padding: 40px 20px; }
+        .product { background: white; border-radius: 15px; padding: 20px; margin: 20px auto; max-width: 400px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .btn-wa { background: var(--wa-color); color: white; padding: 15px 30px; text-decoration: none; border-radius: 10px; display: inline-block; font-weight: bold; margin-top: 15px; }
     </style>
 </head>
 <body>
-
-<header>
-    <h1>SmartHub الخليج</h1>
-</header>
-
-<section class="hero">
-    <h1>مستقبل التكنولوجيا بين يديك</h1>
-    <p>أحدث الملحقات الذكية المختارة بعناية لتناسب أسلوب حياتك</p>
-    <a href="#shop" class="btn-buy">تسوق الآن</a>
-</section>
-
-<h2 style="text-align: center; margin-top: 40px;" id="shop">الأكثر طلباً في الخليج</h2>
-
-<div class="products">
-    <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=500&q=80" alt="سماعات">
-        <h3>سماعات لاسلكية Pro</h3>
-        <p>عزل ضوضاء فائق وبطارية تدوم 24 ساعة</p>
-        <p><strong>499 ريال سعودي</strong></p>
-        <button class="btn-buy">إضافة للسلة</button>
+    <header>
+        <h1>إيليت للإلكترونيات</h1>
+        <p>مستقبل التكنولوجيا بين يديك</p>
+    </header>
+    <div style="padding: 20px;">
+        <div class="product">
+            <h3>ساعة Ultra الذكية</h3>
+            <p>أحدث إصدار مع شاشة AMOLED</p>
+            <a href="https://wa.me/972567838030?text=أريد طلب ساعة Ultra" class="btn-wa">طلب عبر الواتساب</a>
+        </div>
+        <div class="product">
+            <h3>سماعات Air-Pro</h3>
+            <p>صوت نقي وعزل ضوضاء فائق</p>
+            <a href="https://wa.me/972567838030?text=أريد طلب السماعات" class="btn-wa">طلب عبر الواتساب</a>
+        </div>
     </div>
-
-    <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=500&q=80" alt="ساعة ذكية">
-        <h3>ساعة Smart X</h3>
-        <p>تتبع اللياقة البدنية ومقاومة للماء</p>
-        <p><strong>850 ريال سعودي</strong></p>
-        <button class="btn-buy">إضافة للسلة</button>
-    </div>
-
-    <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=500&q=80" alt="شاحن سريع">
-        <h3>شاحن مغناطيسي سريع</h3>
-        <p>متوافق مع جميع الهواتف الحديثة</p>
-        <p><strong>120 ريال سعودي</strong></p>
-        <button class="btn-buy">إضافة للسلة</button>
-    </div>
-</div>
-
-<footer>
-    <p>جميع الحقوق محفوظة &copy; 2026 SmartHub الخليج</p>
-</footer>
-
 </body>
 </html>
