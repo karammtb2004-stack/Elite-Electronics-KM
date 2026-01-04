@@ -3,38 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>متجر كرم للإلكترونيات - عروض الخليج</title>
+    <title>متجر كرم للإلكترونيات</title>
     <style>
-        body { font-family: Arial, sans-serif; background-color: #f4f4f4; text-align: center; padding: 20px; }
-        .product-card { background: white; border-radius: 15px; padding: 20px; max-width: 350px; margin: 20px auto; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-        .product-card img { width: 100%; border-radius: 10px; }
-        .price { color: #e44d26; font-size: 1.5em; font-weight: bold; margin: 10px 0; }
-        .old-price { text-decoration: line-through; color: #999; font-size: 0.9em; }
-        .btn-whatsapp { background-color: #25d366; color: white; padding: 15px 25px; border: none; border-radius: 50px; cursor: pointer; font-size: 1.1em; text-decoration: none; display: inline-block; }
-        .badge { background: #ff0000; color: white; padding: 5px 10px; border-radius: 5px; font-size: 0.8em; }
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; text-align: center; margin: 0; padding: 0; }
+        .header { background: #1a1a1a; color: white; padding: 20px; position: sticky; top: 0; z-index: 100; }
+        .container { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; padding: 15px; }
+        .product-card { background: white; border-radius: 10px; width: 45%; max-width: 180px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); overflow: hidden; display: flex; flex-direction: column; }
+        .product-card img { width: 100%; height: 150px; object-fit: cover; }
+        .info { padding: 10px; flex-grow: 1; }
+        .info h3 { font-size: 0.9em; margin: 5px 0; height: 35px; overflow: hidden; }
+        .price { color: #e44d26; font-weight: bold; font-size: 1.1em; }
+        .btn-buy { background: #25d366; color: white; text-decoration: none; padding: 8px; font-size: 0.8em; font-weight: bold; display: block; border-top: 1px solid #eee; }
     </style>
 </head>
 <body>
 
-    <h1>أهلاً بكم في متجر كرم 🇰🇼 🇸🇦</h1>
-    <p>أفضل المنتجات التقنية بأقل الأسعار في الخليج</p>
+<div class="header">
+    <h2>متجر كرم 🇸🇦 🇰🇼</h2>
+    <p style="font-size: 0.8em; margin: 0;">أفضل عروض الإلكترونيات في الخليج</p>
+</div>
 
+<div class="container">
     <div class="product-card">
-        <span class="badge">عرض لفترة محدودة</span>
-        ​<img src="https://ae01.alicdn.com/kf/S7e76162121704689bc51378345759164v.jpg" alt="ساعة ذكية ذهبية">
-        
-        <h3>ساعة الرياضة واللياقة الذكية (إصدار خاص)</h3>
-        <p>مراقبة الصحة | مقاومة للماء | تدعم جميع الهواتف</p>
-        
-        <p class="price">135 ريال سعودي</p>
-        <p class="old-price">250 ريال سعودي</p>
-
-        <a href="https://wa.me/970567838030?text=أريد طلب الساعة الذهبية من متجر كرم" class="btn-whatsapp">
-            اطلب الآن عبر واتساب
-        </a>
+        <img src="https://ae01.alicdn.com/kf/S7e76162121704689bc51378345759164v.jpg" alt="ساعة">
+        <div class="info">
+            <h3>ساعة الإصدار الذهبي</h3>
+            <div class="price">135 ريال</div>
+        </div>
+        <a href="https://wa.me/970567838030?text=طلب المنتج 1" class="btn-buy">اطلب الآن</a>
     </div>
 
-    <p style="font-size: 0.8em; color: #777;">التوصيل متاح لجميع مناطق المملكة العربية السعودية</p>
+    <div class="product-card">
+        <img src="https://ae01.alicdn.com/kf/S4d3394c8e75e4681878f0808a0f96860O.jpg" alt="ساعة الترا">
+        <div class="info">
+            <h3>ساعة Ultra رياضية</h3>
+            <div class="price">155 ريال</div>
+        </div>
+        <a href="https://wa.me/970567838030?text=طلب المنتج 2" class="btn-buy">اطلب الآن</a>
+    </div>
+
+    <div class="product-card">
+        <img src="https://via.placeholder.com/150" alt="منتج 3">
+        <div class="info">
+            <h3>اسم المنتج 3 هنا</h3>
+            <div class="price">00 ريال</div>
+        </div>
+        <a href="https://wa.me/970567838030?text=طلب المنتج 3" class="btn-buy">اطلب الآن</a>
+    </div>
+
+    </div>
+
+<footer style="padding: 20px; color: #888; font-size: 0.8em;">
+    جميع الحقوق محفوظة لمتجر كرم 2026
+</footer>
 
 </body>
 </html>
