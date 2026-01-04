@@ -3,57 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>متجر كرم للإلكترونيات</title>
+    <title>Elite Electronics KM | إيليت للإلكترونيات</title>
     <style>
-        body { font-family: Arial, sans-serif; background-color: #f4f4f4; text-align: center; margin: 0; padding: 0; }
-        .header { background: #1a1a1a; color: white; padding: 20px; }
-        .container { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; padding: 10px; }
-        .product-card { background: white; border-radius: 8px; width: 46%; max-width: 170px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); overflow: hidden; display: flex; flex-direction: column; margin-bottom: 10px; }
-        .product-card img { width: 100%; height: 140px; object-fit: cover; background: #eee; }
-        .info { padding: 8px; flex-grow: 1; }
-        .info h3 { font-size: 0.8em; margin: 5px 0; height: 32px; overflow: hidden; color: #333; }
-        .price { color: #e44d26; font-weight: bold; font-size: 1em; }
-        .btn-buy { background: #25d366; color: white; text-decoration: none; padding: 10px; font-size: 0.8em; font-weight: bold; display: block; border: none; }
+        :root { 
+            --gold: #f2e307; /* لون شعارك الأصفر */
+            --dark-bg: #121417; /* لون خلفية اللوجو الداكنة */
+            --white: #ffffff;
+        }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background-color: #f4f4f4; margin: 0; }
+        
+        /* تصميم الهيدر مع اللوجو */
+        .header { 
+            background: var(--dark-bg); 
+            color: var(--white); 
+            padding: 20px; 
+            text-align: center; 
+            border-bottom: 3px solid var(--gold);
+        }
+        .header img { 
+            width: 100px; /* حجم اللوجو */
+            border-radius: 50%; 
+            border: 2px solid var(--gold);
+            margin-bottom: 10px;
+        }
+
+        .container { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; padding: 20px; }
+        
+        /* تنسيق كروت المنتجات */
+        .product-card { 
+            background: white; 
+            border-radius: 12px; 
+            width: 45%; 
+            max-width: 190px; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+            overflow: hidden; 
+            border: 1px solid #ddd;
+        }
+        .product-card img { width: 100%; height: 160px; object-fit: cover; }
+        
+        .price { color: #d32f2f; font-weight: bold; font-size: 1.1em; padding: 10px; text-align: center; }
+        
+        /* أزرار الأفلييت والواتساب */
+        .btn-group { display: flex; flex-direction: column; padding: 10px; gap: 8px; }
+        .btn-buy { background: var(--dark-bg); color: var(--gold); text-decoration: none; text-align: center; padding: 8px; border-radius: 5px; font-weight: bold; border: 1px solid var(--gold); }
+        .btn-wa { background: #25d366; color: white; text-decoration: none; text-align: center; padding: 8px; border-radius: 5px; }
     </style>
 </head>
 <body>
 
 <div class="header">
-    <h1>متجر كرم 🇸🇦 🇰🇼</h1>
+    <img src="logo.jpg" alt="Karam Logo">
+    <h1>Elite Electronics KM</h1>
+    <p style="color: var(--gold);">نخبة الإلكترونيات بين يديك</p>
 </div>
 
-<div class="container" id="items-container">
+<div class="container">
+    <div class="product-card">
+        <img src="https://ae01.alicdn.com/kf/S7e76162121704689bc51378345759164v.jpg" alt="ساعة">
+        <div class="price">135 ريال</div>
+        <div class="btn-group">
+            <a href="#" class="btn-buy">شراء من AliExpress</a>
+            <a href="https://wa.me/970567838030" class="btn-wa">استفسار واتساب</a>
+        </div>
     </div>
-
-<script>
-    const container = document.getElementById('items-container');
-    
-    // قائمة بـ 20 صورة ثابتة لمنتجات تقنية (ساعات وسماعات) لضمان ظهورها
-    const images = [
-        "https://images.unsplash.com/photo-1546868871-70c122467d8b?w=300", // ساعة 1
-        "https://images.unsplash.com/photo-1508685096489-7aac291ba597?w=300", // ساعة 2
-        "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=300", // سماعة 1
-        "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300", // سماعة 2
-        "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300"  // منتج تقني
-    ];
-
-    for(let i=1; i<=20; i++) {
-        // نختار صورة من القائمة أعلاه بشكل دوري
-        let imgSrc = images[(i-1) % images.length];
-        let price = 100 + (i * 5); // تسعير تجريبي بالريال
-        
-        container.innerHTML += `
-            <div class="product-card">
-                <img src="${imgSrc}" alt="منتج ${i}">
-                <div class="info">
-                    <h3>منتج إلكتروني مميز #${i}</h3>
-                    <div class="price">${price} ريال</div>
-                </div>
-                <a href="https://wa.me/970567838030?text=أريد طلب المنتج رقم ${i}" class="btn-buy">اطلب الآن</a>
-            </div>
-        `;
-    }
-</script>
+</div>
 
 </body>
 </html>
