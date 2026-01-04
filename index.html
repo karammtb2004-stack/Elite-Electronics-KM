@@ -6,56 +6,54 @@
     <title>متجر كرم للإلكترونيات</title>
     <style>
         body { font-family: Arial, sans-serif; background-color: #f4f4f4; text-align: center; margin: 0; padding: 0; }
-        .header { background: #1a1a1a; color: white; padding: 20px; position: sticky; top: 0; z-index: 100; }
-        .container { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; padding: 15px; }
-        .product-card { background: white; border-radius: 10px; width: 45%; max-width: 180px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); overflow: hidden; display: flex; flex-direction: column; }
-        .product-card img { width: 100%; height: 150px; object-fit: cover; }
-        .info { padding: 10px; flex-grow: 1; }
-        .info h3 { font-size: 0.9em; margin: 5px 0; height: 35px; overflow: hidden; }
-        .price { color: #e44d26; font-weight: bold; font-size: 1.1em; }
-        .btn-buy { background: #25d366; color: white; text-decoration: none; padding: 8px; font-size: 0.8em; font-weight: bold; display: block; border-top: 1px solid #eee; }
+        .header { background: #1a1a1a; color: white; padding: 20px; }
+        .container { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; padding: 10px; }
+        .product-card { background: white; border-radius: 8px; width: 46%; max-width: 170px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); overflow: hidden; display: flex; flex-direction: column; margin-bottom: 10px; }
+        .product-card img { width: 100%; height: 140px; object-fit: cover; background: #eee; }
+        .info { padding: 8px; flex-grow: 1; }
+        .info h3 { font-size: 0.8em; margin: 5px 0; height: 32px; overflow: hidden; color: #333; }
+        .price { color: #e44d26; font-weight: bold; font-size: 1em; }
+        .btn-buy { background: #25d366; color: white; text-decoration: none; padding: 10px; font-size: 0.8em; font-weight: bold; display: block; border: none; }
     </style>
 </head>
 <body>
 
 <div class="header">
-    <h2>متجر كرم 🇸🇦 🇰🇼</h2>
-    <p style="font-size: 0.8em; margin: 0;">أفضل عروض الإلكترونيات في الخليج</p>
+    <h1>متجر كرم 🇸🇦 🇰🇼</h1>
 </div>
 
-<div class="container">
-    <div class="product-card">
-        <img src="https://ae01.alicdn.com/kf/S7e76162121704689bc51378345759164v.jpg" alt="ساعة">
-        <div class="info">
-            <h3>ساعة الإصدار الذهبي</h3>
-            <div class="price">135 ريال</div>
-        </div>
-        <a href="https://wa.me/970567838030?text=طلب المنتج 1" class="btn-buy">اطلب الآن</a>
+<div class="container" id="items-container">
     </div>
 
-    <div class="product-card">
-        <img src="https://ae01.alicdn.com/kf/S4d3394c8e75e4681878f0808a0f96860O.jpg" alt="ساعة الترا">
-        <div class="info">
-            <h3>ساعة Ultra رياضية</h3>
-            <div class="price">155 ريال</div>
-        </div>
-        <a href="https://wa.me/970567838030?text=طلب المنتج 2" class="btn-buy">اطلب الآن</a>
-    </div>
+<script>
+    const container = document.getElementById('items-container');
+    
+    // قائمة بـ 20 صورة ثابتة لمنتجات تقنية (ساعات وسماعات) لضمان ظهورها
+    const images = [
+        "https://images.unsplash.com/photo-1546868871-70c122467d8b?w=300", // ساعة 1
+        "https://images.unsplash.com/photo-1508685096489-7aac291ba597?w=300", // ساعة 2
+        "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=300", // سماعة 1
+        "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300", // سماعة 2
+        "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300"  // منتج تقني
+    ];
 
-    <div class="product-card">
-        <img src="https://via.placeholder.com/150" alt="منتج 3">
-        <div class="info">
-            <h3>اسم المنتج 3 هنا</h3>
-            <div class="price">00 ريال</div>
-        </div>
-        <a href="https://wa.me/970567838030?text=طلب المنتج 3" class="btn-buy">اطلب الآن</a>
-    </div>
-
-    </div>
-
-<footer style="padding: 20px; color: #888; font-size: 0.8em;">
-    جميع الحقوق محفوظة لمتجر كرم 2026
-</footer>
+    for(let i=1; i<=20; i++) {
+        // نختار صورة من القائمة أعلاه بشكل دوري
+        let imgSrc = images[(i-1) % images.length];
+        let price = 100 + (i * 5); // تسعير تجريبي بالريال
+        
+        container.innerHTML += `
+            <div class="product-card">
+                <img src="${imgSrc}" alt="منتج ${i}">
+                <div class="info">
+                    <h3>منتج إلكتروني مميز #${i}</h3>
+                    <div class="price">${price} ريال</div>
+                </div>
+                <a href="https://wa.me/970567838030?text=أريد طلب المنتج رقم ${i}" class="btn-buy">اطلب الآن</a>
+            </div>
+        `;
+    }
+</script>
 
 </body>
 </html>
