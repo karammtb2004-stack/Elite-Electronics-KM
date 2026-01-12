@@ -3,68 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elite Electronics - المنتجات الطبية</title>
+    <title>Karam - Elite Electronics</title>
     <style>
-        body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; background-color: #f4f7f6; color: #333; }
+        body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; background-color: #f0f2f5; color: #333; line-height: 1.6; }
         
-        /* تكبير منطقة اللوجو 3 مرات */
-        .header { background: #ffffff; padding: 40px 20px; text-align: center; box-shadow: 0 2px 15px rgba(0,0,0,0.1); }
-        .logo { width: 300px; height: auto; margin-bottom: 20px; border-radius: 15px; }
-        .header h1 { margin: 10px 0; font-size: 28px; color: #1a5c37; }
+        /* هيدر اللوجو - حجم كبير جداً */
+        .header { background: #ffffff; padding: 50px 20px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .logo { width: 500px; max-width: 90%; height: auto; border-radius: 15px; margin-bottom: 15px; }
+        .header h1 { font-size: 32px; color: #1a5c37; margin: 10px 0; }
 
-        .container { max-width: 1100px; margin: 30px auto; padding: 0 15px; }
-        .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
         
-        .product-card { background: white; border-radius: 20px; padding: 25px; text-align: center; transition: 0.3s; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border: 1px solid #e0e0e0; }
-        .product-card:hover { transform: translateY(-10px); box-shadow: 0 12px 20px rgba(0,0,0,0.1); }
-        .product-card img { width: 100%; height: 250px; object-fit: contain; margin-bottom: 20px; }
-        .product-card h3 { font-size: 18px; margin-bottom: 20px; color: #2c3e50; }
-        .btn-buy { background: #27ae60; color: white; padding: 12px 25px; border-radius: 30px; text-decoration: none; display: block; font-weight: bold; font-size: 16px; transition: 0.3s; }
-        .btn-buy:hover { background: #219150; }
+        /* كارت المنتج */
+        .product-card { background: white; border-radius: 20px; padding: 20px; text-align: center; transition: 0.4s; box-shadow: 0 6px 12px rgba(0,0,0,0.05); border: 1px solid #e0e0e0; display: flex; flex-direction: column; justify-content: space-between; }
+        .product-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+        .product-card img { width: 100%; height: 300px; object-fit: contain; margin-bottom: 15px; }
+        .product-card h3 { font-size: 19px; color: #2c3e50; margin-bottom: 20px; min-height: 50px; }
+        
+        .btn-order { background: #27ae60; color: white; padding: 12px 20px; border-radius: 30px; text-decoration: none; font-weight: bold; font-size: 17px; transition: 0.3s; }
+        .btn-order:hover { background: #219150; }
     </style>
 </head>
 <body>
 
     <div class="header">
-        <img src="FR_IMG_1767539632305.jpg" alt="Logo" class="logo">
+        <img src="1000010900.jpg" alt="Karam Logo" class="logo">
         <h1>Elite Electronics</h1>
-        <p>جودة ومصداقية في المنتجات الطبية</p>
+        <p>الوكيل المعتمد لأحدث المنتجات الطبية والعلاجية</p>
     </div>
 
     <div class="container">
         <div class="products-grid">
+            
             <div class="product-card">
-                <img src="IMG_20260110_154032_915.jpg">
-                <h3>كريم الفهد السعودي</h3>
-                <a href="#" class="btn-buy">اطلب الآن عبر واتساب</a>
+                <img src="1000011317.jpg" alt="كريم الفهد">
+                <h3>كريم الفهد السعودي الأصلي</h3>
+                <a href="#" class="btn-order">اطلب الآن</a>
             </div>
 
             <div class="product-card">
-                <img src="IMG_20260110_154044_094.jpg">
-                <h3>تيتان جيل (Titan Gel)</h3>
-                <a href="#" class="btn-buy">اطلب الآن عبر واتساب</a>
+                <img src="1000011322.jpg" alt="تيتان جيل">
+                <h3>تيتان جيل (Titan Gel) المطور</h3>
+                <a href="#" class="btn-order">اطلب الآن</a>
             </div>
 
             <div class="product-card">
-                <img src="IMG_20260110_154048_949.jpg">
-                <h3>منتج طبي ممتاز</h3>
-                <a href="#" class="btn-buy">اطلب الآن</a>
+                <img src="1000011318.jpg" alt="IRVY XXL">
+                <h3>كريم IRVY XXL الأمريكي</h3>
+                <a href="#" class="btn-order">اطلب الآن</a>
             </div>
+
             <div class="product-card">
-                <img src="IMG_20260110_154054_618.jpg">
-                <h3>منتج طبي ممتاز</h3>
-                <a href="#" class="btn-buy">اطلب الآن</a>
+                <img src="1000011321.jpg" alt="Maral Gel">
+                <h3>مارال جيل (Maral XXL Gold)</h3>
+                <a href="#" class="btn-order">اطلب الآن</a>
             </div>
+
             <div class="product-card">
-                <img src="IMG_20260110_154130_075.jpg">
-                <h3>منتج طبي ممتاز</h3>
-                <a href="#" class="btn-buy">اطلب الآن</a>
+                <img src="1000011320.jpg" alt="Lady Fire">
+                <h3>قطرات ليدي فير (Lady Fire)</h3>
+                <a href="#" class="btn-order">اطلب الآن</a>
             </div>
+
             <div class="product-card">
-                <img src="IMG_20260110_154108_185.jpg">
-                <h3>منتج طبي ممتاز</h3>
-                <a href="#" class="btn-buy">اطلب الآن</a>
+                <img src="1000011323.jpg" alt="Silver Eva">
+                <h3>بخاخ حواء الفضي الأصلي</h3>
+                <a href="#" class="btn-order">اطلب الآن</a>
             </div>
+
         </div>
     </div>
 
